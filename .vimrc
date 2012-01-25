@@ -4,6 +4,10 @@ call pathogen#helptags()
 
 set foldmethod=indent
 set foldlevel=99
+set hidden
+
+set number
+set hlsearch
 
 map <c-j> <c-w>j
 map <c-k> <c-w>k
@@ -11,9 +15,12 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 map <leader>td <Plug>TaskList
+colorscheme evening
 
 map <leader>g :GundoToggle<CR>
 
+map <c-\> :s!$!\\!<CR><Esc>
+map <c-e> i<CR><Esc>
 syntax on                           " syntax highlighing
 filetype on                          " try to detect filetypes
 filetype plugin indent on    " enable loading indent file for filetype
@@ -24,7 +31,7 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 let g:pyflakes_use_quickfix = 0
 
 let g:pep8_map='<leader>8'
-
+let javascript_enable_domhtmlcss=1
 
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
@@ -47,15 +54,31 @@ nmap <silent><Leader>tn <Esc>:Pytest next<CR>
 nmap <silent><Leader>tp <Esc>:Pytest previous<CR>
 nmap <silent><Leader>te <Esc>:Pytest error<CR>
 
-" Add the virtualenv's site-packages to vim path
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir,
-    'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
+" Enable CursorLine
+set cursorline
+
+" Default Colors for CursorLine
+highlight  CursorLine ctermbg=1 ctermfg=None
+
+" Change Color when entering Insert Mode
+autocmd InsertEnter * highlight  CursorLine ctermbg=Blue ctermfg=None
+
+" Revert Color to default when leaving Insert Mode
+autocmd InsertLeave * highlight  CursorLine ctermbg=1 ctermfg=None
+
+highlight Cursor ctermbg=green ctermfg=green
+
+set noswapfile
+set nobackup
+set nowb
+
+set autoread
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set expandtab
+
+  
