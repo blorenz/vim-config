@@ -14,8 +14,18 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+" disable arrow keys
+    map <up> <nop>
+    map <down> <nop>
+    map <left> <nop>
+    map <right> <nop>
+    imap <up> <nop>
+    imap <down> <nop>
+    imap <left> <nop>
+    imap <right> <nop>
+
 map <leader>td <Plug>TaskList
-colorscheme evening
+colorscheme default 
 
 map <leader>g :GundoToggle<CR>
 
@@ -57,16 +67,6 @@ nmap <silent><Leader>te <Esc>:Pytest error<CR>
 " Enable CursorLine
 set cursorline
 
-" Default Colors for CursorLine
-highlight  CursorLine ctermbg=1 ctermfg=None
-
-" Change Color when entering Insert Mode
-autocmd InsertEnter * highlight  CursorLine ctermbg=Blue ctermfg=None
-
-" Revert Color to default when leaving Insert Mode
-autocmd InsertLeave * highlight  CursorLine ctermbg=1 ctermfg=None
-
-highlight Cursor ctermbg=green ctermfg=green
 
 set noswapfile
 set nobackup
