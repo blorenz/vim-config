@@ -25,7 +25,7 @@ map <c-h> <c-w>h
     imap <right> <nop>
 
 map <leader>td <Plug>TaskList
-colorscheme default 
+colorscheme 256-jungle
 
 map <leader>g :GundoToggle<CR>
 
@@ -39,7 +39,7 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 let g:pyflakes_use_quickfix = 0
-
+let python_highlight_all = 1
 let g:pep8_map='<leader>8'
 let javascript_enable_domhtmlcss=1
 
