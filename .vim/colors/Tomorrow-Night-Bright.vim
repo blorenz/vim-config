@@ -17,6 +17,7 @@ let s:aqua = "70c0b1"
 let s:blue = "7aa6da"
 let s:purple = "c397d8"
 let s:window = "4d5057"
+let s:realred = "8c0000"
 
 set background=dark
 hi clear
@@ -315,6 +316,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("pythonStatement", s:purple, "", "")
 	call <SID>X("pythonConditional", s:purple, "", "")
 	call <SID>X("pythonFunction", s:blue, "", "")
+	call <SID>X("pythonRepeat", s:orange, "", "")
+	call <SID>X("pythonPreCondit", s:orange, "", "")
+	call <SID>X("pythonOperator", s:green, "", "")
+	call <SID>X("pythonException", s:yellow, "", "")
+	call <SID>X("pythonDecorator", s:yellow, "", "")
+	call <SID>X("pythonIndentError", s:realred, "", "")
+	call <SID>X("pythonSpaceError", s:realred, "", "")
+	call <SID>X("pythonError", s:realred, "", "")
+	call <SID>X("pythonExClass", s:yellow, "", "")
 
 	" JavaScript Highlighting
 	call <SID>X("javaScriptBraces", s:foreground, "", "")
