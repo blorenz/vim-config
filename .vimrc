@@ -25,7 +25,7 @@ map <c-h> <c-w>h
     imap <right> <nop>
 
 map <leader>td <Plug>TaskList
-colorscheme 256-jungle
+colorscheme Tomorrow-Night-Bright 
 
 map <leader>g :GundoToggle<CR>
 
