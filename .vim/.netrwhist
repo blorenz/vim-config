@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/virtualenvs/hilton-explorer/hilton-explorer_git/hexplorer/art/templates'
 let g:netrw_dirhist_2='/virtualenvs/hilton-explorer/hilton-explorer_git/hexplorer/art'
 let g:netrw_dirhist_3='/virtualenvs/hilton-explorer/hilton-explorer_git/hexplorer/art/templates'
 let g:netrw_dirhist_4='/virtualenvs/hilton-explorer/hilton-explorer_git/hexplorer/utils/mixins.py'
 let g:netrw_dirhist_5='/virtualenvs/cpi/cpi/cms/models'
+let g:netrw_dirhist_6='/virtualenvs/hilton-explorer/hilton-explorer_git/hexplorer'
